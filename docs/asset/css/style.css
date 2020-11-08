@@ -5783,3 +5783,13 @@ Inverted responsive classes
     background-color: rgb(22 123 171); 
     border-color: 5px solid #fff
 }
+
+#Google {
+    background-color: rgb(22 123 171); 
+    width: 100%;
+}
+
+#icon{
+    font-size:25px;
+    color:red;
+}
