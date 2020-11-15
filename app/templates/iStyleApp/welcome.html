@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>iStyle | Home of Beauty | Select Location</title>
     <meta name="description" content="Some of most important Bootstrap components and HTML objects.">
-    <script src="../asset/scripts/jquery.min.js"></script>
-    <script src="../asset/scripts/main.js"></script>
-    <link rel="stylesheet" href="../asset/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="../asset/css/style.css">
-    <link rel="stylesheet" href="../asset/css/content-box.css">
-    <link rel="stylesheet" href="../asset/css/style2.css">
-    <link rel="icon" href="../asset/media/logos/favicon.png">
+    <script src="../../static/scripts/jquery.min.js"></script>
+    <script src="../../static/scripts/main.js"></script>
+    <link rel="stylesheet" href="../../static/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="../../static/css/content-box.css">
+    <link rel="stylesheet" href="../../static/css/style2.css">
+    <link rel="icon" href="../../static/media/logos/favicon.png">
 </head>
 <body class="template-docs">
     <div id="preloader"></div>
@@ -21,8 +21,8 @@
         <div class="container">
             <div class="menu-brand">
                 <a href="#">
-                    <img class="logo-default" src="../asset/media/logos/anime1.png" alt="logo" />
-                    <img class="logo-retina" src="../asset/media/logos/anime1.png" alt="logo" />
+                    <img class="logo-default" src="../../static/media/logos/anime1.png" alt="logo" />
+                    <img class="logo-retina" src="../../static/media/logos/anime1.png" alt="logo" />
                 </a>
             </div>
             <i class="menu-btn"></i>
@@ -30,7 +30,7 @@
               
                 <div class="menu-right">
                     <div class="menu-custom-area">
-                        <a href="../Sign In.html" class="btn btn-xs" href="#" >Logout</a>
+                        <a href="{{url_for('auth.signout')}}" class="btn btn-xs" href="#" >Logout</a>
                     </div>
                 </div>
                 <div class="clear"></div>
@@ -40,7 +40,7 @@
     <header class="header-base" >
         <div class="container" style="color: #000000;">
             <h3>Let Get's Started</h3>
-            <h5>Welcome onboard, Akosile AbdulQuadri 😃</h5>
+            <h5>Welcome onboard, {{current_user.name}} 😃</h5>
         </div>
     </header>
     <main>
@@ -54,8 +54,8 @@
                                 <li class="dropdown">
                                     <a href="#">iStyle</a>
                                     <ul>
-                                        <li><a href="welcome.html">Get a nearby Vendor</a></li>
-                                        <li><a href="transactions.html">Transaction</a></li>
+                                        <li><a href="{{url_for('dashboard.category')}}">Get a nearby Vendor</a></li>
+                                        <li><a href="{{url_for('dashboard.transaction')}}">Transaction</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -71,7 +71,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="../Sign In.html">Log Out</a>
+                                    <a href="{{url_for('auth.signout')}}">Log Out</a>
                                    
                                 </li>
                             </ul>
@@ -85,7 +85,7 @@
                             <input class="input-text" type="text" placeholder="Type in your address....." /><input type="submit" value="Get Location" class="btn"></input>
                         </div>
                         <br>
-                        <a href="category.html" class="btn btn-sm btn-circle">Continue</a>
+                        <a href="{{url_for('dashboard.category')}}" class="btn btn-sm btn-circle">Continue</a>
                         <hr class="space-sm">
                       
                     </div>
@@ -114,8 +114,8 @@
        
             </div>
         </div>
-        <link rel="stylesheet" href="../asset/media/icons/iconsmind/line-icons.min.css">
-        <script src="../asset/scripts/tab-accordion.js"></script>
+        <link rel="stylesheet" href="../../static/media/icons/iconsmind/line-icons.min.css">
+        <script src="../../static/scripts/tab-accordion.js"></script>
     </footer>
 </body>
 </html>

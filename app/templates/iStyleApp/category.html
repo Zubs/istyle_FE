@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>iStyle | Home of Beauty | Vendor Types</title>
     <meta name="description" content="">
-    <script src="../asset/scripts/jquery.min.js"></script>
-    <script src="../asset/scripts/main.js"></script>
-    <link rel="stylesheet" href="../asset/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="../asset/css/style.css">
-    <link rel="stylesheet" href="../asset/css/content-box.css">
-    <link rel="stylesheet" href="../asset/css/style2.css">
-    <link rel="icon" href="../asset/media/logos/favicon.png">
+    <script src="../../static/scripts/jquery.min.js"></script>
+    <script src="../../static/scripts/main.js"></script>
+    <link rel="stylesheet" href="../../static/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="../../static/css/content-box.css">
+    <link rel="stylesheet" href="../../static/css/style2.css">
+    <link rel="icon" href="../../static/media/logos/favicon.png">
 </head>
 <body class="template-docs">
     <div id="preloader"></div>
@@ -20,8 +20,8 @@
         <div class="container">
             <div class="menu-brand">
                 <a href="#">
-                    <img class="logo-default" src="../asset/media/logos/anime1.png" alt="logo" />
-                    <img class="logo-retina" src="../asset/media/logos/anime1.png" alt="logo" />
+                    <img class="logo-default" src="../../static/media/logos/anime1.png" alt="logo" />
+                    <img class="logo-retina" src="../../static/media/logos/anime1.png" alt="logo" />
                 </a>
             </div>
             <i class="menu-btn"></i>
@@ -29,7 +29,7 @@
               
                 <div class="menu-right">
                     <div class="menu-custom-area">
-                        <a href="../Sign In.html" class="btn btn-xs"  >Logout</a>
+                        <a href="{{url_for('auth.signout')}}" class="btn btn-xs"  >Logout</a>
                     </div>
                 </div>
                 <div class="clear"></div>
@@ -38,7 +38,7 @@
     </nav>
     <header class="header-base" >
         <div class="container" style="color: #000000;">
-            <h3>Welcome, Akosile AbdulQuadri</h3>
+            <h3>Welcome, {{current_user.name}}</h3>
             <h5>Enjoy iStyle Services today, proceed to select the service you want 👐</h5>
         </div>
     </header>
@@ -53,8 +53,8 @@
                                 <li class="dropdown">
                                     <a href="#">iStyle</a>
                                     <ul>
-                                        <li><a href="welcome.html">Get a nearby Vendor</a></li>
-                                        <li><a href="transactions.html">Transaction</a></li>
+                                        <!-- <li><a href="{{url_for('dashboard.category')}}">Get a nearby Vendor</a></li> -->
+                                        <li><a href="{{url_for('dashboard.transaction')}}">Transaction</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -70,7 +70,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="../Sign In.html">Log Out</a>
+                                    <a href="{{url_for('auth.signout')}}">Log Out</a>
                                    
                                 </li>
                             </ul>
@@ -83,7 +83,7 @@
                             <div class="album-list">
                                 <div class="album-box">
                                     <a href="#" class="img-box img-scale">
-                                        <img src="../asset/media/saloon/Hairdresser.jpg">
+                                        <img src="../../static/media/saloon/Hairdresser.jpg">
                                     </a>
                                     <div class="caption">
                                         <h3 class="services">Hairdressing</h3>
@@ -91,7 +91,7 @@
                                 </div>
                                 <div class="album-box">
                                     <a href="#" class="img-box img-scale">
-                                        <img src="../asset/media/saloon/Barbing.jpg">
+                                        <img src="../../static/media/saloon/Barbing.jpg">
                                     </a>
                                     <div class="caption">
                                         <h3 class="services">Barbing Saloon</h3>
@@ -102,14 +102,14 @@
                             <div class="album-list">
                                 <div class="album-box">
                                     <a href="#" class="img-box img-scale">
-                                        <img src="../asset/media/saloon/Pedicure.jpg">
+                                        <img src="../../static/media/saloon/Pedicure.jpg">
                                     </a>
                                     <div class="caption">
                                         <h3 class="services">Pedicure</h3>   </div>
                                 </div>
                                 <div class="album-box">
                                     <a href="#" class="img-box img-scale">
-                                        <img src="../asset/media/saloon/Manicure.jpg">
+                                        <img src="../../static/media/saloon/Manicure.jpg">
                                     </a>
                                     <div class="caption">
                                         <h3 class="services">Manicure</h3>   </div>
@@ -123,7 +123,7 @@
                                     <div class="grid-list" data-columns="3" data-columns-md="1" data-columns-sm="1">
                                         <div class="grid-box">
                                             <div class="grid-item">
-                                                <a href="#" class="img-box"><img src="../asset/media/saloon/Hairdresser - inner.jpg" alt=""></a>
+                                                <a href="#" class="img-box"><img src="../../static/media/saloon/Hairdresser - inner.jpg" alt=""></a>
                                                 <div class="caption" style="line-height: 1.0;"><br>
                                                     <p><b>ANIKE'S BEAUTY PLACE</b> </p>
                                                     <p>University of Lagos, Akoka </p><br>
@@ -131,7 +131,7 @@
                                                 </div>
                                             </div>
                                             <div class="grid-item">
-                                                <a href="#" class="img-box"><img src="../asset/media/saloon/Hairdresser - inner.jpg" alt=""></a>
+                                                <a href="#" class="img-box"><img src="../../static/media/saloon/Hairdresser - inner.jpg" alt=""></a>
                                                 <div class="caption" style="line-height: 1.0;"><br>
                                                     <p><b>ANIKE'S BEAUTY PLACE</b> </p>
                                                     <p>University of Lagos, Akoka </p><br>
@@ -139,7 +139,7 @@
                                                 </div>
                                             </div>
                                             <div class="grid-item">
-                                                <a href="#" class="img-box"><img src="../asset/media/saloon/Hairdresser - inner.jpg" alt=""></a>
+                                                <a href="#" class="img-box"><img src="../../static/media/saloon/Hairdresser - inner.jpg" alt=""></a>
                                                 <div class="caption" style="line-height: 1.0;"><br>
                                                     <p><b>ANIKE'S BEAUTY PLACE</b> </p>
                                                     <p>University of Lagos, Akoka </p><br>
@@ -147,7 +147,7 @@
                                                 </div>
                                             </div>
                                             <div class="grid-item">
-                                                <a href="#" class="img-box"><img src="../asset/media/saloon/Hairdresser - inner.jpg" alt=""></a>
+                                                <a href="#" class="img-box"><img src="../../static/media/saloon/Hairdresser - inner.jpg" alt=""></a>
                                                 <div class="caption" style="line-height: 1.0;"><br>
                                                     <p><b>ANIKE'S BEAUTY PLACE</b> </p>
                                                     <p>University of Lagos, Akoka </p><br>
@@ -155,7 +155,7 @@
                                                 </div>
                                             </div>
                                             <div class="grid-item">
-                                                <a href="#" class="img-box"><img src="../asset/media/saloon/Hairdresser - inner.jpg" alt=""></a>
+                                                <a href="#" class="img-box"><img src="../../static/media/saloon/Hairdresser - inner.jpg" alt=""></a>
                                                 <div class="caption" style="line-height: 1.0;"><br>
                                                     <p><b>ANIKE'S BEAUTY PLACE</b> </p>
                                                     <p>University of Lagos, Akoka </p><br>
@@ -163,7 +163,7 @@
                                                 </div>
                                             </div>
                                             <div class="grid-item">
-                                                <a href="#" class="img-box"><img src="../asset/media/saloon/Hairdresser - inner.jpg" alt=""></a>
+                                                <a href="#" class="img-box"><img src="../../static/media/saloon/Hairdresser - inner.jpg" alt=""></a>
                                                 <div class="caption" style="line-height: 1.0;"><br>
                                                     <p><b>ANIKE'S BEAUTY PLACE</b> </p>
                                                     <p>University of Lagos, Akoka </p><br>
@@ -177,22 +177,22 @@
                                     <div class="grid-list" data-columns="3" data-columns-md="1" data-columns-sm="1">
                                         <div class="grid-box">
                                             <div class="grid-item">
-                                                <a href="#" class="img-box"><img src="../asset/media/saloon/Barbing - inner.jpg" alt=""></a>
+                                                <a href="#" class="img-box"><img src="../../static/media/saloon/Barbing - inner.jpg" alt=""></a>
                                             </div>
                                             <div class="grid-item">
-                                                <a href="#" class="img-box"><img src="../asset/media/saloon/Barbing - inner.jpg" alt=""></a>
+                                                <a href="#" class="img-box"><img src="../../static/media/saloon/Barbing - inner.jpg" alt=""></a>
                                             </div>
                                             <div class="grid-item">
-                                                <a href="#" class="img-box"><img src="../asset/media/saloon/Barbing - inner.jpg" alt=""></a>
+                                                <a href="#" class="img-box"><img src="../../static/media/saloon/Barbing - inner.jpg" alt=""></a>
                                             </div>
                                             <div class="grid-item">
-                                                <a href="#" class="img-box"><img src="../asset/media/saloon/Barbing - inner.jpg" alt=""></a>
+                                                <a href="#" class="img-box"><img src="../../static/media/saloon/Barbing - inner.jpg" alt=""></a>
                                             </div>
                                             <div class="grid-item">
-                                                <a href="#" class="img-box"><img src="../asset/media/saloon/Barbing - inner.jpg" alt=""></a>
+                                                <a href="#" class="img-box"><img src="../../static/media/saloon/Barbing - inner.jpg" alt=""></a>
                                             </div>
                                             <div class="grid-item">
-                                                <a href="#" class="img-box"><img src="../asset/media/saloon/Barbing - inner.jpg" alt=""></a>
+                                                <a href="#" class="img-box"><img src="../../static/media/saloon/Barbing - inner.jpg" alt=""></a>
                                             </div>
                                         </div>
                                     </div>
@@ -224,8 +224,8 @@
        
             </div>
         </div>
-        <link rel="stylesheet" href="../asset/media/icons/iconsmind/line-icons.min.css">
-        <script src="../asset/scripts/tab-accordion.js"></script>
+        <link rel="stylesheet" href="../../static/media/icons/iconsmind/line-icons.min.css">
+        <script src="../../static/scripts/tab-accordion.js"></script>
     </footer>
 </body>
 </html>

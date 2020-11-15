@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>iStyle | Home of Beauty | Home</title>
     <meta name="description" content="">
-    <script src="asset/scripts/jquery.min.js"></script>
-    <script src="asset/scripts/main.js"></script>
-    <link rel="stylesheet" href="asset/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="asset/css/style.css">
-    <link rel="stylesheet" href="asset/css/glide.css">
-    <link rel="stylesheet" href="asset/css/magnific-popup.css">
-    <link rel="stylesheet" href="asset/css/content-box.css">
-    <link rel="stylesheet" href="asset/css/contact-form.css">
-    <link rel="stylesheet" href="asset/css/media-box.css">
-    <link rel="stylesheet" href="asset/css/social.css">
-    <link rel="stylesheet" href="asset/css/style2.css">
-    <link rel="icon" href="asset/media/logos/favicon.png">
+    <script src="../static/scripts/jquery.min.js"></script>
+    <script src="../static/scripts/main.js"></script>
+    <link rel="stylesheet" href="../static/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/glide.css">
+    <link rel="stylesheet" href="../static/css/magnific-popup.css">
+    <link rel="stylesheet" href="../static/css/content-box.css">
+    <link rel="stylesheet" href="../static/css/contact-form.css">
+    <link rel="stylesheet" href="../static/css/media-box.css">
+    <link rel="stylesheet" href="../static/css/social.css">
+    <link rel="stylesheet" href="../static/css/style2.css">
+    <link rel="icon" href="../static/media/logos/favicon.png">
 </head>
 <body>
     <div id="preloader"></div>
@@ -26,8 +26,8 @@
         <div class="container">
             <div class="menu-brand">
                 <a href="#">
-                    <img class="logo-default" src="asset/media/logos/anime1.png" alt="logo" />
-                    <img class="logo-retina" src="asset/media/logos/anime1.png" alt="logo" />
+                    <img class="logo-default" src="../static/media/logos/anime1.png" alt="logo" />
+                    <img class="logo-retina" src="../static/media/logos/anime1.png" alt="logo" />
                 </a>
             </div>
             <i class="menu-btn"></i>
@@ -50,8 +50,8 @@
                 </ul>
                 <div class="menu-right">
                     <div class="menu-custom-area">
-                        <a href="Sign%20In.html" class="btn btn-xs" href="#" style="background-color: #9b9bff">Login</a>
-                        <a href="Sign%20Up.html" class="btn btn-xs" href="#" style="background-color: rgb(22 123 171)">Get Started</a>
+                        <a href="{{url_for('auth.signin')}}" class="btn btn-xs" href="#" style="background-color: #9b9bff">Login</a>
+                        <a href="{{url_for('auth.signup')}}" class="btn btn-xs" href="#" style="background-color: rgb(22 123 171)">Get Started</a>
                     </div>
                 </div>
                 <div class="clear"></div>
@@ -75,7 +75,7 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboriso.
                                 </p>
-                                <a href="Sign In.html" class="btn btn-sm btn full-width-sm">Explore</a><span class="space-sm"></span>
+                                <a href="{{url_for('auth.signup')}}" class="btn btn-sm btn full-width-sm">Explore</a><span class="space-sm"></span>
                             </li>
                            
                         </ul>
@@ -83,7 +83,7 @@
                     </div>
                     <div class="col-lg-6">
                         <hr class="space visible-md" />
-                        <img class="" src="asset/media/logos/anime.png" alt="" />
+                        <img class="" src="../static/media/logos/anime.png" alt="" />
                     </div>
                 </div>
             </div>
@@ -93,22 +93,22 @@
             <div class="container">
                 <ul class="slider" data-options="type:carousel,arrows:false,nav:false,perView:5,perViewMd:3,perViewXs:2,gap:80">
                     <li>
-                        <img src="asset/media/logos/logo-7.png" alt="" />
+                        <img src="../static/media/logos/logo-7.png" alt="" />
                     </li>
                     <li>
-                        <img src="asset/media/logos/logo-6.png" alt="" />
+                        <img src="../static/media/logos/logo-6.png" alt="" />
                     </li>
                     <li>
-                        <img src="asset/media/logos/logo-4.png" alt="" />
+                        <img src="../static/media/logos/logo-4.png" alt="" />
                     </li>
                     <li>
-                        <img src="asset/media/logos/logo-1.png" alt="" />
+                        <img src="../static/media/logos/logo-1.png" alt="" />
                     </li>
                     <li>
-                        <img src="asset/media/logos/logo-5.png" alt="" />
+                        <img src="../static/media/logos/logo-5.png" alt="" />
                     </li>
                     <li>
-                        <img src="asset/media/logos/logo-3.png" alt="" />
+                        <img src="../static/media/logos/logo-3.png" alt="" />
                     </li>
                 </ul>
                 <!--WHAT ISTYLE DO PAGE-->
@@ -131,7 +131,7 @@
                         <a href="#" class="btn-text">Read More</a>
                     </div>
                     <div class="col-lg-6 col-md-6" data-anima="fade-right" data-time="1000">
-                        <img src="asset/media/logos/phone-10.png" alt="" />
+                        <img src="../static/media/logos/phone-10.png" alt="" />
                     </div>
                 </div>
                 
@@ -139,7 +139,7 @@
                 <hr class="space" />
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-6" data-anima="fade-right" data-time="1000">
-                        <img src="asset/media/logos/phone-10.png" alt="" />
+                        <img src="../static/media/logos/phone-10.png" alt="" />
                     </div>
                     <div class="col-lg-6 col-md-6" data-anima="fade-left" data-time="1000">
                         <h2>Why Choose iStyle?</h2>
@@ -157,7 +157,7 @@
         </section>
         
         <!--ISTYLE APP COMING SOON, ADVERT PAGE-->
-        <section class="section-image align-center light" style="background-image:url(asset/media/logos/bg.svg)">
+        <section class="section-image align-center light" style="background-image:url(../static/media/logos/bg.svg)">
             <div class="container">
                 <h2>iStyle apps coming soon.</h2>
                 <p class="width-650">
@@ -165,8 +165,8 @@
                     sare nostrud exercitation ullamco dolore eu fugiat nulla pariature.
                 </p>
                 <hr class="space-sm">
-                <a class="btn-store" href="#"><img src="asset/media/logos/store-google.png"></a>
-                <a class="btn-store" href="#"><img src="asset/media/logos/store-apple.png"></a>
+                <a class="btn-store" href="#"><img src="../static/media/logos/store-google.png"></a>
+                <a class="btn-store" href="#"><img src="../static/media/logos/store-apple.png"></a>
             </div>
         </section>
     
@@ -187,7 +187,7 @@
                             Lorem ipsum dolor sit amet no sea takimata sanctus est Lorem ipsum dolor sit amete
                             sare nostrud exercitation ullamco dolore eu fugiat nulla pariature sitame consect sed do eiusmod tempore pardo.
                         </p>
-                        <img src="asset/media/logos/sign-dark.png" alt="" />
+                        <img src="../static/media/logos/sign-dark.png" alt="" />
                     </div>
                 </div>
             </div>
@@ -272,7 +272,7 @@
                             </p>
                             <p class="testimonial-info">
                                 <span>Zubair Idris</span>
-                                <span>Stduent, UNILAG</span>
+                                <span>Student, UNILAG</span>
                             </p>
                         </div>
                     </li>
@@ -412,17 +412,17 @@
        
             </div>
         </div>
-        <link rel="stylesheet" href="asset/media/icons/iconsmind/line-icons.min.css">
-        <script src="asset/scripts/parallax.min.js"></script>
-        <script src="asset/scripts/glide.min.js"></script>
-        <script src="asset/scripts/magnific-popup.min.js"></script>
-        <script src="asset/scripts/tab-accordion.js"></script>
-        <script src="asset/scripts/imagesloaded.min.js"></script>
-        <script src="asset/scripts/contact-form/contact-form.js"></script>
-        <script src="asset/scripts/progress.js"></script>
-        <script src="asset/scripts/pagination.min.js"></script>
-        <script src="asset/scripts/social.min.js"></script>
-        <script src="asset/scripts/custom2.js"></script>
+        <link rel="stylesheet" href="../static/media/icons/iconsmind/line-icons.min.css">
+        <script src="../static/scripts/parallax.min.js"></script>
+        <script src="../static/scripts/glide.min.js"></script>
+        <script src="../static/scripts/magnific-popup.min.js"></script>
+        <script src="../static/scripts/tab-accordion.js"></script>
+        <script src="../static/scripts/imagesloaded.min.js"></script>
+        <script src="../static/scripts/contact-form/contact-form.js"></script>
+        <script src="../static/scripts/progress.js"></script>
+        <script src="../static/scripts/pagination.min.js"></script>
+        <script src="../static/scripts/social.min.js"></script>
+        <script src="../static/scripts/custom2.js"></script>
     </footer>
 </body>
 </html>

@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>iStyle | Home of Beauty | Transactions</title>
     <meta name="description" content="Content boxes for show differents websites component into your theme.">
-    <script src="../asset//scripts/jquery.min.js"></script>
-    <script src="../asset//scripts/main.js"></script>
-    <link rel="stylesheet" href="../asset//css/bootstrap-grid.css">
-    <link rel="stylesheet" href="../asset//css/style.css">
-    <link rel="stylesheet" href="../asset//css/content-box.css">
-    <link rel="stylesheet" href="../asset/css/style2.css">
-    <link rel="icon" href="../asset/media/logos/favicon.png">
+    <script src="../../static/scripts/jquery.min.js"></script>
+    <script src="../../static/scripts/main.js"></script>
+    <link rel="stylesheet" href="../../static//css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../../static//css/style.css">
+    <link rel="stylesheet" href="../../static//css/content-box.css">
+    <link rel="stylesheet" href="../../static/css/style2.css">
+    <link rel="icon" href="../../static/media/logos/favicon.png">
 </head>
 <body class="template-docs">
     <div id="preloader"></div>
@@ -20,8 +20,8 @@
         <div class="container">
             <div class="menu-brand">
                 <a href="#">
-                    <img class="logo-default" src="../asset/media/logos/anime1.png" alt="logo" />
-                    <img class="logo-retina" src="../asset/media/logos/anime1.png" alt="logo" />
+                    <img class="logo-default" src="../../static/media/logos/anime1.png" alt="logo" />
+                    <img class="logo-retina" src="../../static/media/logos/anime1.png" alt="logo" />
                 </a>
             </div>
             <i class="menu-btn"></i>
@@ -29,7 +29,7 @@
               
                 <div class="menu-right">
                     <div class="menu-custom-area">
-                        <a href="../Sign In.html" class="btn btn-xs">Logout</a>
+                        <a href="{{url_for('auth.signout')}}" class="btn btn-xs">Logout</a>
                     </div>
                 </div>
                 <div class="clear"></div>
@@ -38,7 +38,7 @@
     </nav>
     <header class="header-base" >
         <div class="container" style="color: #000000;">
-            <h3>Yo! Akosile AbdulQuadri</h3>
+            <h3>Yo! {{current_user.name}}</h3>
             <h5>Your past transaction with iStyle 💰</h5>
         </div>
     </header>
@@ -53,8 +53,8 @@
                                 <li class="dropdown">
                                     <a href="#">iStyle</a>
                                     <ul>
-                                        <li><a href="welcome.html">Get a nearby Vendor</a></li>
-                                        <li><a href="transactions.html">Transaction</a></li>
+                                        <li><a href="{{url_for('dashboard.category')}}">Get a nearby Vendor</a></li>
+                                        <li><a href="{{url_for('dashboard.transaction')}}'">Transaction</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -70,7 +70,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="../Sign In.html">Log Out</a>
+                                    <a href="{{url_for('auth.signout')}}">Log Out</a>
                                    
                                 </li>
                             </ul>
@@ -82,7 +82,7 @@
                         <div class="tab-box tab-vertical tab-inverse" data-tab-anima="fade-in"  data-columns-md="1" data-columns-sm="1">
                             <div class="panel active" style="flex: 0 0 100%;max-width: 100%;">
                                 <div class="cnt-box cnt-box-side">
-                                    <a href="#" class="img-box"><img src="../asset/media/saloon/Hairdresser - inner.jpg" alt="" /></a>
+                                    <a href="#" class="img-box"><img src="../../static/media/saloon/Hairdresser - inner.jpg" alt="" /></a>
                                     <div class="caption">
                                         <h2>Anike's Beauty Place</h2>
                                         <p>
@@ -92,7 +92,7 @@
                                         </p>
                                         <a class="btn-text" href="#">₦2,050</a>
                                     </div>
-                                    <a href="#" class="img-box"><img src="../asset/media/saloon/Hairdresser - inner.jpg" alt="" /></a>
+                                    <a href="#" class="img-box"><img src="../../static/media/saloon/Hairdresser - inner.jpg" alt="" /></a>
                                     <div class="caption">
                                         <h2>Anike's Beauty Place</h2>
                                         <p>
@@ -105,7 +105,7 @@
                                 </div>
                                 <hr class="space-sm" />
                                 <div class="cnt-box cnt-box-side">
-                                    <a href="#" class="img-box"><img src="../asset/media/saloon/Hairdresser - inner.jpg" alt="" /></a>
+                                    <a href="#" class="img-box"><img src="../../static/media/saloon/Hairdresser - inner.jpg" alt="" /></a>
                                     <div class="caption">
                                         <h2>Anike's Beauty Place</h2>
                                         <p>
@@ -115,7 +115,7 @@
                                         </p>
                                         <a class="btn-text" href="#">₦2,050</a>
                                     </div>
-                                    <a href="#" class="img-box"><img src="../asset/media/saloon/Hairdresser - inner.jpg" alt="" /></a>
+                                    <a href="#" class="img-box"><img src="../../static/media/saloon/Hairdresser - inner.jpg" alt="" /></a>
                                     <div class="caption">
                                         <h2>Anike's Beauty Place</h2>
                                         <p>
@@ -144,13 +144,13 @@
     
         <div class="footer-bar">
             <div class="container">
-                <span>© Codrop LTD 2019. Codrop is a powerful Landing Page App Template built with <a target="_blank" href="https://asset.dev/code/">asset</a> by the <a target="_blank" href="https://schiocco.com/">Schiocco</a> Team. </span>
-                <span><img src="../../media/logo-light.svg" /></span>
+                <span>© Codrop LTD 2019. Codrop is a powerful Landing Page App Template built with <a target="_blank" href="https://../static/dev/code/">../static//a> by the <a target="_blank" href="https://schiocco.com/">Schiocco</a> Team. </span>
+                <span><img src="../../static/media/logo-light.svg" /></span>
             </div>
         </div>
-        <link rel="stylesheet" href="../asset//media/icons/iconsmind/line-icons.min.css">
-        <script src="../asset//scripts/tab-accordion.js"></script>
-        <script src="../asset//scripts/imagesloaded.min.js"></script>
+        <link rel="stylesheet" href="../../static/media/icons/iconsmind/line-icons.min.css">
+        <script src="../../static/scripts/tab-accordion.js"></script>
+        <script src="../../static/scripts/imagesloaded.min.js"></script>
     </footer>
 </body>
 </html>
